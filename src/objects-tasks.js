@@ -25,11 +25,14 @@ function shallowCopy(obj) {
   //     Object.getOwnPropertyDescriptors(obj)
   //   );
   // return Object.fromEntries(Object.entries(obj));
-  const copy = {};
-  Object.keys(obj).forEach((key) => {
-    copy[key] = obj[key];
-  });
-  return copy;
+  //   const copy = {};
+  //   Object.keys(obj).forEach((key) => {
+  //     copy[key] = obj[key];
+  //   });
+  // return copy;
+  //   return Object.assign({}, obj);
+  const method = 'assign';
+  return Object[method]({}, obj);
 }
 
 /**
